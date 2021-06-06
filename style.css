@@ -1,0 +1,35 @@
+
+#id1,#id2,#id3,#id4,#id5,#id6,#id7,#id8{
+
+    animation: slide-up 0.4s linear forwards;
+
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#maniblock{
+
+    animation: slide-Down 0.4s linear ;
+
+}
+
+@keyframes slide-Down {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    0% {
+        
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
