@@ -10,12 +10,15 @@
     <link rel="icon" href="Images/cal_icon.png" type="image/gif" sizes="16x16">
   </head>
 <body id="body">
-   <p class="p-3" id ="h"><b>Note:</b> For lateral entry student leave the previous semester as Empty</p>
-   <div class="container-fluid">
+   
+   <div class="container-fluid" >
     <div class="row">
       <div class="col-lg-4">
-        <div class="container-sm p-2 rounded "  style="background: rgb(255, 255, 255);" >
-          <ol class="list-group list-group p-3" id="hi" >
+        
+        <div class="container-sm p-2 rounded "   style="background: rgb(255, 255, 255);" >
+          <p><span style="font-weight: bold;">Note : </span>  For lateral entry student leave the previous semester as Empty </p>
+          
+          <ol class="list-group list-group p-3"  id="hi" >
           </ol>
           <center class="mb-5">
             <div class="container-sm mb-3 rounded">
@@ -24,11 +27,11 @@
                   <button type="button" onclick="AddNewSem()" class="btn btn-sm btn-primary rounded " id = "bt">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                       <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
-                    </svg>  Add Semster
+                    </svg>  AddSem
               </button>
                 </div>
                 <div class="col-6">
-                  <button type="button"  data-bs-toggle="modal" style="display: none;" data-bs-target="#exampleModal"  class="btn btn-sm btn-outline-danger rounded" id = "bt2">
+                  <button type="button"  data-bs-toggle="modal" style="display: none;" data-bs-target="#exampleModal"  class="btn btn-sm btn-danger rounded" id = "bt2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                       <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
                     </svg> Delete
@@ -54,11 +57,11 @@
       </div>
       <div class="col-lg-8 ">
         <div class="container-sm p-3 ">
-          <span class="badge bg-secondary">Just Marks:</span>
+          <span class="badge bg-secondary">Full Report:</span>
           <div class="container-sm p-3 "> 
-              <div class="row p-3">
+              <div class="row p-3 rounded" >
                 <div class="col-md-4">
-                  <p id="nametag" style="font-family: 'Courier New', Courier, monospace;"></p>
+                  <p id="nametag" style="font-family: 'Courier New', Courier, monospace; font-weight: bold;"></p>
                 </div>
                 <div class="col-md-4">
                   <P id="rolltag" style="font-family: 'Courier New', Courier, monospace;"></P>
@@ -69,32 +72,32 @@
               </div> 
           </div>
           <div class="container-xxl">
-            <div class="row">
-              <div class="col-md-4 p-3">
-                <ul class="list-group">
+            <div class="row  rounded">
+              <div class="col-md-4 p-2">
+                <ul class="list-group  " style="background: transparent;">
                   
-                  <li class="list-group-item">Semester 1  SGPA :</li>
-                  <li class="list-group-item">Semester 2  SGPA :</li>
-                  <li class="list-group-item">Semester 3  SGPA :</li>
-                  <li class="list-group-item">Semester 4  SGPA :</li>
+                  <li class="list-group-item" id="p1" >Sem 1:  --</li>
+                  <li class="list-group-item" id= "p2" >Sem 2:  --</li>
+                  <li class="list-group-item" id= "p3">Sem 3:  --</li>
+                  <li class="list-group-item" id= "p4">Sem 4:  --</li>
                 </ul>
               </div>
-              <div class="col-md-4 p-3">
+              <div class="col-md-4 p-2 ">
                 <ul class="list-group">
                   
-                  <li class="list-group-item">Semester 5  SGPA :</li>
-                  <li class="list-group-item">Semester 6  SGPA :</li>
-                  <li class="list-group-item">Semester 7  SGPA :</li>
-                  <li class="list-group-item">Semester 8  SGPA :</li>
+                  <li class="list-group-item"id= "p5" >Sem 5:  --</li>
+                  <li class="list-group-item"id= "p6" >Sem 5:  --</li>
+                  <li class="list-group-item"id= "p7" >Sem 7:  --</li>
+                  <li class="list-group-item"id= "p8">Sem 8:  --</li>
                 </ul>
               </div>
-              <div class="col-md-4 p-3">
-                <div class="card " >
+              <div class="col-md-4 p-2">
+                <div class="card shadow-sm " >
                   <div class="card-body">
 
-                    <center><h2 style="font-size: 30px; font-family:monospace"><span id = "totcgpa">0<span></h2></center>
+                    <center><h2 style="font-size: 35px; font-family:monospace"><span id = "totcgpa">0<span></h2></center>
                       <hr>
-                      <center><h1>10</h1></center>
+                      <center><h1>CGPA</h1></center>
                       
                   </div>
                 </div>

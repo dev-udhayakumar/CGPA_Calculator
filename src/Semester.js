@@ -4,6 +4,7 @@ document.getElementById("deptag").innerHTML = "Department : " + localStorage['ke
 
 var a = 1;
 AddNewSem(); 
+AddNewSem(); 
 function AddNewSem(){
     var li = document.createElement("li");
     var id = "id"+ a;
@@ -34,7 +35,7 @@ function AddNewSem(){
           p1.setAttribute("id",p1id);
           p1.setAttribute("class" ,"fs-6 text-dark");
           document.getElementById(div1id).appendChild(p1);
-          document.getElementById(p1id).innerHTML ="SGPA : " + 0 + " Total credit : " + 0;
+          document.getElementById(p1id).innerHTML ="SGPA : " + 0 + " Credit : " + 0;
         }
       }
       function Editbtn(){
@@ -180,12 +181,7 @@ function AddNewSem(){
                   document.getElementById(trHeadid).appendChild(thno);
                   document.getElementById(thnoid).innerHTML = "#";
             
-                  var thsub = document.createElement("th");
-                  var thsubid = "thsubid" + a;
-                  thsub.setAttribute("id",thsubid);
-                  thsub.setAttribute("sope","col");
-                  document.getElementById(trHeadid).appendChild(thsub);
-                  document.getElementById(thsubid).innerHTML = "Subject";
+                  
             
                   var thGa = document.createElement("th");
                   var thGaid = "thGaid" + a;
@@ -246,6 +242,10 @@ function AddNewSem(){
     var del2 = document.getElementById(mod);
     del2.remove();
     del.remove();
+    k= b-1;
+    scgpa[k] = 0;
+    credit[k] = 0;
+    document.getElementById("p" + b).innerHTML = "Sem "+b+": -- " ;
     a = a - 1;
     if (a > 2){
         document.getElementById("bt2").style.display = "block";
@@ -256,6 +256,7 @@ function AddNewSem(){
   if (a <= 8){
     document.getElementById("bt").style.display = "block";
   }
+
   }
   function tr(a,i){
 
@@ -270,25 +271,12 @@ function AddNewSem(){
     thnof.setAttribute("id",thbodyid);
     thnof.setAttribute("sope","row");
     document.getElementById(trbodyid).appendChild(thnof);
-    document.getElementById(thbodyid).innerHTML = i;
-    subject();
+    document.getElementById(thbodyid).innerHTML = i + ".Sub";
+     
     grade();
     credit();
 
-    function subject(){
-      var tdsub = document.createElement("td");
-      var tdsubid = "tdsubid" + a + i;
-      tdsub.setAttribute("id",tdsubid);
-      document.getElementById(trbodyid).appendChild(tdsub);
-      
-      var subinput = document.createElement("input");
-      var subinputid = "subinputid" + a + i ;
-      subinput.setAttribute("id",subinputid);
-      subinput.setAttribute("type","text");
-      subinput.setAttribute("class","form-control");
-      subinput.setAttribute("placeholder","subject");
-      document.getElementById(tdsubid).appendChild(subinput);
-    }
+  
 
     function grade(){
       var tdgd = document.createElement("td");
@@ -311,7 +299,7 @@ function AddNewSem(){
         gdoption0.setAttribute("value","0");
         gdoption0.setAttribute("id",gdoption0id);
         document.getElementById(gdinputid).appendChild(gdoption0);
-        document.getElementById(gdoption0id).innerHTML = "Grade or GP";
+        document.getElementById(gdoption0id).innerHTML = "Grade";
 
         var gdoption1 = document.createElement("option");
         gdoption1id = "gdoption1id" + a + i;

@@ -12,7 +12,8 @@ function sum(l,m){
     }
     sgpa = gp / cred;
     fsgpa = sgpa.toFixed(2);
-    document.getElementById("p1" + l).innerHTML = "SGPA : " + fsgpa + " Total credit : " +cred;
+    document.getElementById("p1" + l).innerHTML = "SGPA : " + fsgpa + ".Credits : " +cred;
+    document.getElementById("p" + l).innerHTML = " Sem " + l+ ":  SGPA : " + fsgpa + "   Credits : " +cred;
     z = l - 1
     scgpa[z] = gp;
     credit[z] = cred
