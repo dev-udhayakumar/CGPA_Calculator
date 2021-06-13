@@ -5,7 +5,7 @@ body{
     background-color: rgb(255, 253, 253);
 }
 
-#id1,#id2,#id3,#id4,#id5,#id6,#id7,#id8{
+#id2,#id3,#id4,#id5,#id6,#id7,#id8{
 
     animation: slide-up 0.4s linear forwards;
 

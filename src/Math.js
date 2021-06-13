@@ -32,5 +32,5 @@ function sum(l,m){
     }
     totcgpa = cgpa / totcre
     last = totcgpa.toFixed(2);
-    document.getElementById("totcgpa").innerHTML = last +" / 10";
+    document.getElementById("totcgpa").innerHTML = last;
 }

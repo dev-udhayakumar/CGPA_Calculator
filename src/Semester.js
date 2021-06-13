@@ -99,7 +99,7 @@ function AddNewSem(){
             btnsubmit.setAttribute("onclick","sum()");
             btnsubmit.setAttribute("class","btn btn-primary ");
             document.getElementById(divHeadid).appendChild(btnsubmit);
-            document.getElementById(btnsubmitid).innerHTML ="Submit";
+            document.getElementById(btnsubmitid).innerHTML ="Save Changes";
     
             
             
@@ -143,7 +143,7 @@ function AddNewSem(){
             Delsub.setAttribute("onclick","delSub(" + a +",0)");
             Delsub.setAttribute("class","btn btn-sm btn-danger col-md-12 ");
             document.getElementById(divbtndelid).appendChild(Delsub);
-            document.getElementById(Delsubid).innerHTML = "Delete Subject" ;
+            document.getElementById(Delsubid).innerHTML = "Delete " ;
     
 
             
