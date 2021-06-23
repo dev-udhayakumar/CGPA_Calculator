@@ -45,7 +45,7 @@ function AddNewSem(){
         btn1.setAttribute("data-bs-toggle","modal");
         var modeli = "#modeldiv1" + a ;
         btn1.setAttribute("data-bs-target",modeli);
-        btn1.setAttribute("class","btn-sm btn btn-outline-primary p-2 mb-2 rounded bi bi-pencil-square");
+        btn1.setAttribute("class","btn-sm btn btn-outline-primary fw-bold p-2 mb-2 rounded bi bi-pencil-square");
         btn1.setAttribute("type","button");
         document.getElementById(id).appendChild(btn1);
         document.getElementById(btnE).innerHTML = " Edit";
