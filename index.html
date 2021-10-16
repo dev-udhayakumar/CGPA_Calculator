@@ -8,38 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="style.css" rel ="stylesheet">
     <link rel="icon" href="Images/icon1.png" type="image/gif" sizes="16x16">
+    
 </head>
-<body style="background: rgb(244, 249, 250);"> 
-  <h1 class="p-2">Vanakam 🙏🏽</h1>
-  <div class="container-fluid" id ="maniblock">
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+<body > 
+  <h1 class="p-2">CGPA calculator</h1>
+  <!-- <div class="container-fluid" id ="maniblock">
       <div class="container-sm p-3">
         <div class="row">
-          <div class="col-md-6 p-3">
-            <div class="card   "style="background: rgb(244, 249, 250); border:black;">
-              <div class="card-body p-3 ">
-                <h5 class="card-title">CGPA for Engineering Collages <p class="fw-light ">(2019 Regulation)</p></h5>
-                <p class="card-text"> CGPA stands for Cumulative Grade Points Average. Anna university follows grade point calculation(GPA) from 2008 regulation batch students instead of calculating percentage.</p>
-                <p class="card-text">Compared to percentage method grade point average(GPA) method is good method because each and every subject the performance of the students marks will be considered based on their credit points.
-                  Only disadvantage in grade point method is failed student doesn't know about their marks.</p>
-              <button type="button" class="btn btn-outline-primary " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
-                How do we Calculate ?
-              </button>
-              <div class="offcanvas offcanvas-end"  id="offcanvasRight">
-                <div class="offcanvas-header">
-                  <h5 id="offcanvasRightLabel">How do we Calculate ?</h5>
-                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <p>will be added soon.......</p>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
           <div class="col-md-6">
             <div class="card-body   ">
               <div class="container " >
@@ -75,8 +50,8 @@
                               These details used in Result
                             </label>
                           </div>
-                          <div class="">
-                            <center><button type="button" onclick="homepage()" class="btn btn-primary col-md-12 "></a>Submit</button></center>
+                          <div class="d-grid gap-2">
+                            <button class="btn btn-primary" onclick="homepage()"  type="button">Submit</button>
                           </div>
                         </form>
                   </div>
@@ -85,18 +60,126 @@
           </div>
         </div>
       </div>
+  </div> -->
+  <div class="container-fluid">
+    <div class="row align-items-start">
+      <div class="container-fluid" >
+        <div class="row">
+          <div class="col-lg-4" >
+            <div class="container-sm p-2 rounded "    >
+              <p><span style="font-weight: bold;">Note : </span>  For lateral entry student leave the previous semester as Empty </p> 
+              <ol class="list-group list-group p-3"    id="hi" >
+              </ol>
+              <center class="mb-5">
+                <div class="container-sm mb-3 rounded">
+                  <div class="row p-3">
+                    <div class="col-6">
+                      <button type="button" onclick="AddNewSem()" class="btn btn-sm btn-primary rounded  " id = "bt">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                          <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                        </svg> <span style="font-weight: 700;">AddSem</span> 
+                  </button>
+                    </div>
+                    <div class="col-6">
+                      <button type="button"  data-bs-toggle="modal" style="display: none;" data-bs-target="#exampleModal"  class="btn btn-sm btn-danger rounded" id = "bt2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                          <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                        </svg> Delete
+                  </button>
+                  <div class="modal fade" id="exampleModal"   >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content" >
+                        <div class="modal-header" >
+                          <h5 class="modal-title" id="exampleModalLabel"><p class="badge bg-danger fs-5">Delete     </p> last   Semester!! </h5>
+                        </div>
+                        <div class="modal-footer" >
+                          <button type="button" class="btn btn-outline-secondary btn-" data-bs-dismiss="modal">Cancel</button>
+                          <button type="button" onclick="del()" data-bs-dismiss="modal" id ="ConDel" class="btn btn btn-outline-danger">Yes I'm sure</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+              </center>
+              </div>
+          </div>
+          <div class="col-lg-8 ">
+            <div class="container-fluid p-3 ">
+              <span class="badge bg-secondary">Full Report:</span>
+              <div class="container-fluid p-3 "> 
+                  <div class="row p-3 rounded " >
+                    <div class="col-md-4">
+                      <p id="nametag" style="font-family: 'Courier New', Courier, monospace; font-weight: bold;"></p>
+                    </div>
+                    <div class="col-md-4">
+                      <P id="rolltag" style="font-family: 'Courier New', Courier, monospace;"></P>
+                    </div>
+                    <div class="col-md-4">
+                      <p id="deptag" style="font-family: 'Courier New', Courier, monospace;"></p>
+                    </div>
+                  </div> 
+              </div>
+              <div class="container-xxl">
+                <div class="row  rounded">
+                  <div class="col-md-4 p-2 ">
+                    <ul class="list-group shadow-sm  " style="background: transparent;">
+                      
+                      <li class="list-group-item" id="p1" ><b>Sem 1</b>:  --</li>
+                      <li class="list-group-item" id= "p2" ><b>Sem 2</b>:  --</li>
+                      <li class="list-group-item" id= "p3"><b>Sem 3</b>:  --</li>
+                      <li class="list-group-item" id= "p4"><b>Sem 4</b>:  --</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 p-2 ">
+                    <ul class="list-group shadow-sm">
+                      
+                      <li class="list-group-item"id= "p5" ><b>Sem 5</b>:  --</li>
+                      <li class="list-group-item"id= "p6" ><b>Sem 6</b>:  --</li>
+                      <li class="list-group-item"id= "p7" ><b>Sem 7</b>:  --</li>
+                      <li class="list-group-item"id= "p8"><b>Sem 8</b>:  --</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <div class="card shadow-sm " >
+                      <div class="card-body">
+    
+                        <center><h2 style="font-size: 35px; font-family:monospace"><span id = "totcgpa">0<span></h2></center>
+                          <hr>
+                          <center><h1>CGPA</h1></center>
+                          
+                      </div>
+                    </div>
+                  </div>
+                    
+                </div>
+                <div class="text-center p-4   " style="font-size: x-small; background-color: rgb(255, 255, 255);" >
+                  அழிவின்றி வாழ்வது நம் அறிவும் அன்புமே
+                 <a class="text-reset fw-bold" href="https://github.com/udhay5021">
+                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div id ="models"></div>
       <script >
         function homepage(){
-        window.location.assign('calculate.html')
         localStorage['keyname'] = document.getElementById("name").value;
         localStorage['keyroll'] = document.getElementById("rollno").value;
         localStorage['keydept'] = document.getElementById("dept").value;
        }
       </script>
+      <script src="src/Math.js"></script>
+      <script src="src/Semester.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 </body>
+
 </html>
 

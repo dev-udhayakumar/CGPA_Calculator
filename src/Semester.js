@@ -1,7 +1,6 @@
-document.getElementById("nametag").innerHTML = "Name : " +  localStorage['keyname'] ;
-document.getElementById("rolltag").innerHTML = "RollNo : " + localStorage['keyroll'];
-document.getElementById("deptag").innerHTML = "Department : " + localStorage['keydept'];
-
+// document.getElementById("nametag").innerHTML = "Name : " +  localStorage['keyname'] ;
+// document.getElementById("rolltag").innerHTML = "RollNo : " + localStorage['keyroll'];
+// document.getElementById("deptag").innerHTML = "Department : " + localStorage['keydept'];
 var a = 1;
 AddNewSem(); 
 AddNewSem(); 
